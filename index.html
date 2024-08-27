@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Decodificador de Texto do Escriba</h1>
+    </header>
     <main>
-        <h1>Decodificador de Texto do Escriba</h1>
         <section class="decodificador">
             <div class="decodificador__insercao">
+                <h2>Insira a mensagem aqui</h2>
                 <div class="decodificador__insercao__campo">
                     <input id="campo__texto" type="text">
                 </div>
@@ -25,12 +28,11 @@
             <div class="decodificador__resultado">
                 <h2 id="titulo__resultado">Nenhuma mensagem</h2>
                 <p id="texto__resultado">Digite um texto para ser criptografado</p>
-                <button>Copiar</button>
             </div>
         </section>
     </main>
-    <footer>
-        Desenvolvido por OEscriba
+    <footer class="rodape">
+        <p class="rodape__texto">Desenvolvido por OEscriba</p>
     </footer>
     <script src="encryption.js"></script>
 </body>

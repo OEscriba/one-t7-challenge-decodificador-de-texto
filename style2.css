@@ -7,10 +7,10 @@
 }
 
 :root {
-    --cor-primaria: #2E073F;
-    --cor-secundaria: #7A1CAC;
-    --cor-terciaria: #AD49E1;
-    --cor-hover: #EBD3F8;
+    --cor-primaria: #021526;
+    --cor-secundaria: #6EACDA;
+    --cor-terciaria: #E2E2B6;
+    --cor-hover: #03346E;
 
     --fonte-primaria: "Krona One", sans-serif;
     --fonte-secundaria: "Montserrat", sans-serif;
@@ -21,6 +21,9 @@ body {
     background-color: var(--cor-terciaria);
     color: var(--cor-primaria);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header.cabecalho {
@@ -28,6 +31,7 @@ header.cabecalho {
     color: #fff;
     padding: 20px;
     text-align: center;
+    flex: 0 1 auto;
 }
 
 header.cabecalho__titulo {
@@ -36,38 +40,28 @@ header.cabecalho__titulo {
 }
 
 main {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-.decodificador {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.section.decodificador {
     background-color: #fff;
-
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
     padding: 20px;
-}
-
-.decodificador__insercao {
-    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-}
-.decodificador__resultado {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .decodificador__insercao__campo {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 input#campo__texto {
@@ -81,6 +75,7 @@ input#campo__texto {
 .decodificador__insercao__botoes {
     display: flex;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -99,18 +94,19 @@ button:hover {
 }
 
 .decodificador__resultado {
-    margin-top: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 h2#titulo__resultado {
     font-family: var(--fonte-primaria);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--cor-primaria);
     margin-bottom: 10px;
 }
 
 p#texto__resultado {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--cor-primaria);
 }
 
@@ -119,9 +115,8 @@ footer.rodape {
     color: #fff;
     padding: 10px;
     text-align: center;
-    position: fixed;
+    flex: 0 1 auto;
     width: 100%;
-    bottom: 0;
 }
 
 footer.rodape__texto {
